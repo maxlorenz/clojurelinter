@@ -23,6 +23,10 @@
             {
                 "title": "Fix imports",
                 "command": "extension.slamhound"
+            },
+            {
+                "title": "Fix format",
+                "command": "extension.cljfmt"
             }
         ]
     },
