@@ -15,17 +15,14 @@
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "languages": [
+        "commands": [
             {
-                "id": "clojure",
-                "aliases": [
-                    "Clojure",
-                    "clojure"
-                ],
-                "extensions": [
-                    ".clj",
-                    ".cljc"
-                ]
+                "title": "Kibit",
+                "command": "extension.kibit"
+            },
+            {
+                "title": "Fix imports",
+                "command": "extension.slamhound"
             }
         ]
     },

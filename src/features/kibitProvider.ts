@@ -12,7 +12,7 @@ export default class KibitProvider {
 
     private diagnosticCollection: vscode.DiagnosticCollection;
 
-    private doKibit(textDocument: vscode.TextDocument) {
+    public doKibit(textDocument: vscode.TextDocument) {
         log("TRIGGERED");
 
         if (textDocument.languageId !== 'clojure') {
@@ -71,7 +71,6 @@ export default class KibitProvider {
         this.command = vscode.commands.registerCommand(KibitProvider.commandId, this.runCodeAction, this);
         subscriptions.push(this);
         this.diagnosticCollection = vscode.languages.createDiagnosticCollection();
-
 
         vscode.workspace.onDidCloseTextDocument((textDocument) => {
             this.diagnosticCollection.delete(textDocument.uri);
