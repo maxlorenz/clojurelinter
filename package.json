@@ -11,14 +11,23 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onLanguage:clojure"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
+        "languages": [
+            {
+                "id": "clojure",
+                "aliases": [
+                    "Clojure",
+                    "clojure"
+                ],
+                "extensions": [
+                    ".clj",
+                    ".cljc"
+                ]
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "tsc -p ./",
